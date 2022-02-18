@@ -1,5 +1,17 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
+import userManager from "../utils/userService";
 
 export const HomeComponent = () => {
-  return <div>Hello man </div>;
+  const [user, setUser] = useState(null);
+  const handleGetUser = async () => {
+    const user = await userManager.getUser();
+    setUser(user);
+  };
+  return (
+    <div>
+      <h3>Hello man</h3>
+      <button onClick={handleGetUser}>FetchUser</button>
+      <pre>{user}</pre>
+    </div>
+  );
 };
