@@ -1,8 +1,8 @@
 import React from "react";
 import { BrowserRouter as Router, Link, Routes, Route } from "react-router-dom";
 import { HomeComponent } from "../components/home";
-import LoginComponent from "../components/login";
-import { RegisterComponent } from "../components/register";
+import { LoginComponent } from "../components/login";
+import { CallbackComponent } from "../components/callback";
 
 export const RoutesWrapper = () => {
   return (
@@ -16,7 +16,7 @@ export const RoutesWrapper = () => {
       <Routes>
         <Route exact path="/home" element={<HomeComponent />} />
         <Route exact path="/login" element={<LoginComponent />} />
-        <Route exact path="/register" element={<RegisterComponent />} />
+        <Route exact path="/callback" element={<CallbackComponent />} />
       </Routes>
     </Router>
   );

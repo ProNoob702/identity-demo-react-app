@@ -1,7 +1,7 @@
 import React from "react";
 import userManager from "../utils/userService";
 
-const LoginComponent = () => {
+export const LoginComponent = () => {
   const submit = async () => {
     await userManager.signinRedirect();
   };
@@ -14,5 +14,3 @@ const LoginComponent = () => {
     </div>
   );
 };
-
-export default LoginComponent;

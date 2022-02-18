@@ -7,7 +7,7 @@ const config = {
   client_id: "interactive.public",
   response_type: "code",
   scope: "openid profile api",
-  redirect_uri: url + "/home",
+  redirect_uri: url + "/callback",
   silent_redirect_uri: url + "/callback",
   automaticSilentRenew: false,
   validateSubOnSilentRenew: true,

@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import userManager from "../utils/userService";
 
 const doSignInCallback = async () => {
@@ -6,12 +7,15 @@ const doSignInCallback = async () => {
 };
 
 export const CallbackComponent = () => {
+  const navigate = useNavigate();
   useEffect(() => {
     doSignInCallback()
-      .then((res) => {})
+      .then((res) => {
+        navigate("/home");
+      })
       .catch((err) => {
         console.error(err);
       });
-  }, []);
+  }, [navigate]);
   return <div>Redirecting...</div>;
 };
