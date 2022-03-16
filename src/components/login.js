@@ -5,6 +5,7 @@ export const LoginComponent = () => {
   const submit = async () => {
     await userManager.signinRedirect();
   };
+
   return (
     <div>
       <h3>Login man</h3>

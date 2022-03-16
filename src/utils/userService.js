@@ -8,7 +8,7 @@ const config = {
   response_type: "code",
   scope: "openid profile api",
   redirect_uri: url + "/callback",
-  silent_redirect_uri: url + "/callback",
+  silent_redirect_uri: url + "/silent_renew",
   automaticSilentRenew: false,
   validateSubOnSilentRenew: true,
   monitorAnonymousSession: true,

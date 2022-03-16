@@ -2,15 +2,15 @@ import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import userManager from "../utils/userService";
 
-const doSignInCallback = async () => {
-  return await userManager.signinCallback();
+const doSignInSilentCallback = async () => {
+  return await userManager.signinSilentCallback();
 };
 
-export const CallbackComponent = () => {
+export const SilentRenewComponent = () => {
   const navigate = useNavigate();
   useEffect(() => {
-    console.log("callback");
-    doSignInCallback()
+    console.log("silent-renew");
+    doSignInSilentCallback()
       .then((res) => {
         navigate("/home");
       })

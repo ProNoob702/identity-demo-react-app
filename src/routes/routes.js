@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Link, Routes, Route } from "react-router-dom";
 import { HomeComponent } from "../components/home";
 import { LoginComponent } from "../components/login";
 import { CallbackComponent } from "../components/callback";
+import { SilentRenewComponent } from "../components/silentRenew";
 
 export const RoutesWrapper = () => {
   return (
@@ -17,6 +18,7 @@ export const RoutesWrapper = () => {
         <Route exact path="/home" element={<HomeComponent />} />
         <Route exact path="/login" element={<LoginComponent />} />
         <Route exact path="/callback" element={<CallbackComponent />} />
+        <Route exact path="/silent_renew" element={<SilentRenewComponent />} />
       </Routes>
     </Router>
   );
